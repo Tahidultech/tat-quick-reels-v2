@@ -1,0 +1,14 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Required by Code On The Go's Gradle 9.6.1 / AGP 9.3.1 toolchain.
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:2.3.21'
+    }
+}
+
+plugins {
+    id 'com.android.application' version '9.3.1' apply false
+}

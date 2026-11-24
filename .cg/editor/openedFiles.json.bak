@@ -1,0 +1,21 @@
+{
+  "allFiles": [
+    {
+      "file": "/storage/emulated/0/CodeOnTheGoProjects/tat-quick-reels-v2/app/src/main/res/layout/activity_downloader.xml",
+      "selection": {
+        "end": {
+          "column": 40,
+          "index": 6290,
+          "line": 167
+        },
+        "start": {
+          "column": 40,
+          "index": 6290,
+          "line": 167
+        }
+      }
+    }
+  ],
+  "projectPath": "/storage/emulated/0/CodeOnTheGoProjects/tat-quick-reels-v2",
+  "selectedFile": "/storage/emulated/0/CodeOnTheGoProjects/tat-quick-reels-v2/app/src/main/res/layout/activity_downloader.xml"
+}

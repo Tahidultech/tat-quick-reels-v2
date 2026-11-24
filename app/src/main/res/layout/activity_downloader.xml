@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#10131A"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!-- URL and Paste -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/urlInput"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#202633"
+                android:hint="Paste video URL here"
+                android:textColorHint="#8993A3"
+                android:inputType="textUri"
+                android:paddingStart="10dp"
+                android:paddingEnd="6dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:singleLine="true"
+                android:includeFontPadding="false"
+                android:textSize="11sp"
+                android:textColor="#FFFFFF" />
+
+            <ImageButton
+                android:id="@+id/pasteButton"
+                android:layout_width="42dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:background="#263548"
+                android:src="@android:drawable/ic_menu_set_as"
+                android:tint="#FFFFFF"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                android:contentDescription="Paste URL" />
+
+        </LinearLayout>
+
+        <!-- Video Information -->
+        <LinearLayout
+            android:id="@+id/videoInfo"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="8dp"
+            android:background="#202633"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/videoThumbnail"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:contentDescription="Video thumbnail"
+                android:background="#303846" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/videoTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:text="Video title"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/videoDuration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Duration: --"
+                    android:textColor="#AAB4C3"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/videoUploader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="Uploader"
+                    android:textColor="#AAB4C3"
+                    android:textSize="8sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Format and Download -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <Spinner
+                android:id="@+id/formatSpinner"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:background="#202633"
+                android:paddingStart="6dp"
+                android:paddingEnd="4dp" />
+
+            <ImageButton
+                android:id="@+id/downloadButton"
+                android:layout_width="44dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="6dp"
+                android:background="#20C997"
+                android:src="@android:drawable/stat_sys_download"
+                android:tint="#10131A"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                android:contentDescription="Download"
+                android:enabled="false" />
+
+        </LinearLayout>
+
+        <!-- Download Progress -->
+        <ProgressBar
+            android:id="@+id/downloadProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_marginTop="12dp"
+            android:max="100"
+            android:progress="0"
+            android:progressTint="#20C997"
+            android:visibility="gone" />
+
+        <!-- Download Status -->
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Ready"
+            android:textColor="#9AA4B2"
+            android:textSize="9sp" />
+
+        <!-- History Button at Bottom -->
+        <ImageButton
+            android:id="@+id/historyButton"
+            android:layout_width="38dp"
+            android:layout_height="32dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="12dp"
+            android:background="#263548"
+            android:src="@android:drawable/ic_menu_recent_history"
+            android:tint="#FFFFFF"
+            android:padding="7dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="Download History" />
+
+    </LinearLayout>
+
+</ScrollView>
